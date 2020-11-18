@@ -21,7 +21,7 @@ public class DragAndDrop : MonoBehaviour
         {
             RaycastHit hitInfo;
             target = ReturnClickedObject(out hitInfo);
-            if (target != null)
+            if (target != null && target.tag == "drag")
             {
                 isMouseDragging = true;
                 Debug.Log("our target position :" + target.transform.position);
