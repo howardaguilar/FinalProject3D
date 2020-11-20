@@ -25,10 +25,15 @@ public class GameController : MonoBehaviour
         {
             RaycastHit hitInfo;
             target = ReturnClickedObject(out hitInfo);
-            if (target != null && target.name == "Sphere" && answerOne == false)
+            if (target != null && target.name == "Cube" && answerOne == false)
             {
                 answerOne = true;
                 questionTwo();
+            }
+            else if (target != null && target.name == "Cube" && answerOne == true && answerTwo == false)
+            {
+                answerTwo = true;
+                questionThree();
             }
         }
     }
@@ -41,6 +46,11 @@ public class GameController : MonoBehaviour
     void questionTwo()
     {
         question.text = "Is gravity really there?";
+    }
+
+    void questionThree()
+    {
+        question.text = "It's all flat....";
     }
 
     GameObject ReturnClickedObject(out RaycastHit hit)
