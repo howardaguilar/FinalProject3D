@@ -24,7 +24,7 @@ public class DragAndDrop : MonoBehaviour
             if (target != null && target.tag == "drag")
             {
                 isMouseDragging = true;
-                Debug.Log("our target position :" + target.transform.position);
+                //Debug.Log("our target position :" + target.transform.position);
                 //Here we Convert world position to screen position.
                 screenPosition = Camera.main.WorldToScreenPoint(target.transform.position);
                 offset = target.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPosition.z));
