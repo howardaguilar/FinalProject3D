@@ -14,7 +14,7 @@ public class GameController_Level2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // Currently empty and attached to Main Camera

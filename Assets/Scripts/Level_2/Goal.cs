@@ -14,7 +14,11 @@ public class Goal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.tag == "sphere" && gameObject.transform.position.y < -2)
+        {
+            Destroy(gameObject);
+            remaining.updateFails();
+        }
     }
 
     public void OnTriggerEnter(Collider other)

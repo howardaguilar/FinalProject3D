@@ -23,6 +23,7 @@ public class Shoot : MonoBehaviour
             if (rb != null)
             {
                 rb.velocity = mouseRay.direction * speed;
+                Object.Destroy(newGameObject, 2.0f);
             }
         }
     }

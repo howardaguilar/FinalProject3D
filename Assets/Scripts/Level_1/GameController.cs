@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
                 responseOne();
             }
             // Third Answer
-            if (target != null && target.name == "Cylinder" && answerThree == false && answerTwo == true)
+            if (target != null && target.gameObject.tag == "goal" && answerThree == false && answerTwo == true)
             {
                 answerThree = true;
                 //questionsDone();
