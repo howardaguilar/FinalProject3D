@@ -9,8 +9,9 @@ public class Transition : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip patrick;
     public AudioClip response;
+    bool voiced = false;
 
-    private float timeRemaining = 30;
+    private float timeRemaining = 29;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,9 @@ public class Transition : MonoBehaviour
     {
         if (timeRemaining > 0)
         {
-            if (timeRemaining < 5 && timeRemaining > 4.9)
+            if (timeRemaining < 5 && voiced == false)
             {
+                voiced = true;
                 playFlat();
             }
             timeRemaining -= Time.deltaTime;
